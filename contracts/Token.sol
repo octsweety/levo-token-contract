@@ -649,6 +649,7 @@ contract Token is ERC20, ERC20Detailed, ERC20Pausable, ERC20Burnable, Ownable {
         ERC20()
         public
     {
+        require(initialSupply > 0);
         _mint(msg.sender, initialSupply);
     }
 
